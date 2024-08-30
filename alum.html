@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/otp.css">
+    <script src="https://kit.fontawesome.com/e3b3a79433.js" crossorigin="anonymous"></script>
+    <title>Wrigley University Alumni</title>
+</head>
+
+<body>
+    <div class="container11">
+        <video autoplay muted loop plays-inline="background-clip">
+            <source src="imgs/WELCOME.mp4" type="video/mp4">
+        </video>
+    </div>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="imgs/clglogo.png" alt="Wrigley">
+            <a href="#" class="btn btn-rounded">Login</a>
+        </div>
+        <div class="showcase-content">
+            <h1>Wrigley University Alumni</h1>
+            <h2>----idk</h2>
+        </div>
+    </header>
+    <section class="tabs">
+        <div class="container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fa-solid fa-network-wired"></i>
+                <p class="hide-sm">Know more about us</p>
+            </div>
+            <div id="tab-2" class="tab-item">
+                <i class="fa-solid fa-calendar"></i>
+                <p class="hide-sm">Events</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fas fa-sign-in"></i>
+                <p class="hide-sm">Login</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-content">
+        <div class="container">
+            <div id="tab-1-content" class="tab-content-item">
+                <div>
+                    <p class="text-lg">
+                        Founded in 2001, our association started with a small group of dedicated alumni who
+                        recognized the importance of staying connected beyond graduation. Over the years, we've
+                        grown into a dynamic organization with members spanning across the globe, representing
+                        diverse industries, professions, and walks of life.
+                    </p>
+                    <img src="imgs/Aboutus.jpeg" alt="" />
+                </div>
+            </div>
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-top">
+                    <p class="text-lg">
+                        Just have a look at the upcoming events from our college. further after logging into your
+                        account
+                    </p>
+                </div>
+            </div>
+
+            <div id="tab-3-content" class="tab-content-item">
+                <p class="text-lg">
+                    Here is the login page, please log in with your credentials.
+                </p>
+                <div class="form">
+                    <input type="email" id="email" placeholder="Enter Email...">
+                    <div class="otpverify">
+                        <input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email...">
+                        <button class="btn" id="otp-btn">Verify</button>
+                    </div>
+                    <button class="btn" onclick="sendOTP()">Send OTP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Questions? , CALL +91 8374849797</p>
+        <div class="footer-cols">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Ways To Watch</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Netflix Originals</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Redeem Gift Cards</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Buy Gift Cards</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="jss/ng.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="emailotp.js"></script>
+
+    <script>
+        let generatedOTP = '';
+
+        function generateOTP(length = 6) {
+            let otp = '';
+            for (let i = 0; i < length; i++) {
+                otp += Math.floor(Math.random() * 10);
+            }
+            return otp;
+        }
+
+        function sendOTP() {
+            generatedOTP = generateOTP();
+            alert(`Your OTP is: ${generatedOTP}`);
+            document.querySelector('.otpverify').style.display = 'flex';
+            console.log(`Generated OTP: ${generatedOTP}`);
+        }
+
+        document.getElementById('otp-btn').addEventListener('click', function () {
+            const enteredOTP = document.getElementById('otp_inp').value;
+            if (enteredOTP === generatedOTP) {
+                alert('OTP Verified Successfully!');
+                window.location.href = 'btw.html';
+            } else {
+                alert('Incorrect OTP, please try again.');
+            }
+        });
+    </script>
+</body>
+
+</html>

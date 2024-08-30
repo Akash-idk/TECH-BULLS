@@ -1,0 +1,112 @@
+:root {
+    --primary-colour: orange;
+    --dark-colour: #141414;
+    --light-grey: #999;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-colour);
+    color: #fff;
+}
+
+.header {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--primary-colour);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #222;
+}
+
+.nav-link {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-colour);
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.event-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 1rem;
+}
+
+.event-title {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.event-date {
+    color: var(--light-grey);
+    font-size: 0.9rem;
+}
+
+.event-description {
+    margin: 1rem 0;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-colour);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: var(--light-grey);
+    font-size: 0.9rem;
+}

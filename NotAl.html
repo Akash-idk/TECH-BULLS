@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrigley University Networking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style1.css"> <!-- Link to the external CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Wrigley University Notable Alumni</h1>
+    </header>
+
+    <!-- Tab Navigation -->
+    <section class="tabs">
+        <div class="container">
+            <div class="tab-item" onclick="openTab('tab-1-content')">
+                <p class="text-lg">Engineering</p>
+            </div>
+            <div class="tab-item" onclick="openTab('tab-2-content')">
+                <p class="text-lg">Doctor</p>
+            </div>
+            <div class="tab-item" onclick="openTab('tab-3-content')">
+                <p class="text-lg">Sports</p>
+            </div>
+            <div class="tab-item" onclick="openTab('tab-4-content')">
+                <p class="text-lg">Alumni</p>
+            </div>
+            <div class="tab-item" onclick="openTab('tab-5-content')">
+                <p class="text-lg">Alumni Details</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Content Section -->
+    <section class="tab-content">
+        <div class="container">
+            <!-- Engineering Tab Content -->
+            <div id="tab-1-content" class="tab-content-item">
+                <p class="text-lg">Engineering</p>
+                <img src="imgs/img1.jpeg" alt="Engineering Alumni 1" />
+                <img src="imgs/img2.jpeg" alt="Engineering Alumni 2" />
+                <img src="imgs/img3.jpeg" alt="Engineering Alumni 3" />
+            </div>
+
+            <!-- doctor Tab Content -->
+            <div id="tab-2-content" class="tab-content-item">
+                <p class="text-lg">Doctor</p>
+                <img src="imgs/img4.jpeg" alt="doctor Alumni 1" />
+                <img src="imgs/img5.jpeg" alt="doctor Alumni 2" />
+                <img src="imgs/img6.jpeg" alt="doctor Alumni 3" />
+            </div>
+
+            <!-- Sports Tab Content -->
+            <div id="tab-3-content" class="tab-content-item">
+                <p class="text-lg">Sports</p>
+                <img src="imgs/img7.jpeg" alt="Sports Alumni 1" />
+                <img src="imgs/img8.png" alt="Sports Alumni 2" />
+                <img src="imgs/img9.png" alt="Sports Alumni 3" />
+            </div>
+
+            <!-- Alumni Tab Content -->
+            <div id="tab-4-content" class="tab-content-item">
+                <p class="text-lg">Notable Alumni</p>
+                <p>Information about notable alumni...</p>
+            </div>
+
+            <!-- Alumni Details (Table) Tab Content -->
+            <div id="tab-5-content" class="tab-content-item">
+                <p class="text-lg">Alumni Details</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Jiten</th>
+                            <th>Chakri</th>
+                            <th>Vikas</th>
+                            <th>Vivek</th>
+                            <th>Krishna</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The registered Email ID of these alumni</td>
+                            <td>sjiten@gitam.in</td>
+                            <td>kchakri@gitam.in</td>
+                            <td>vikas@gitam.in</td>
+                            <td>vivek@gitam.in</td>
+                            <td>krishna@gitam.in</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td>123456789</td>
+                            <td>123654789</td>
+                            <td>987654432</td>
+                            <td>789654312</td>
+                            <td>8919973413</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript function to show and hide tab content based on the selected tab
+        function openTab(tabId) {
+            // Hide all tab content items
+            const tabContents = document.querySelectorAll('.tab-content-item');
+            tabContents.forEach((content) => {
+                content.style.display = 'none';
+            });
+
+            // Show the selected tab content
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.style.display = 'block';
+            }
+        }
+
+        // Initialize by showing the first tab (adjust as needed)
+        openTab('tab-1-content');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+:root {
+    --primary-colour: orange;
+    --dark-colour: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    color: orange;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+.header {
+    background: var(--dark-colour);
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid var(--primary-colour);
+}
+
+.donations-container {
+    padding: 2rem;
+    background: #111;
+    color: #fff;
+}
+
+.donation-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.donation-card {
+    background: #222;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+.donation-icon {
+    font-size: 2rem;
+    color: var(--primary-colour);
+    margin-bottom: 1rem;
+}
+
+.donation-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.donation-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-colour);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    background: var(--dark-colour);
+    color: #999;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
